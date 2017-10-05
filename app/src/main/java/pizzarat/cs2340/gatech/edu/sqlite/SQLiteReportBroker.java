@@ -30,7 +30,7 @@ public class SQLiteReportBroker extends AppCompatActivity { //TODO: duplicate ex
         values.put(RatSightingDb.getReportTableAddressCol(), rReport.getAddress());
         values.put(RatSightingDb.getReportTableZipcodeCol(), rReport.getZipCode());
         values.put(RatSightingDb.getReportTableCityCol(), rReport.getCity());
-        values.put(RatSightingDb.getReportTableBoroughCol(), rReport.getBorough().getSectorName());
+        values.put(RatSightingDb.getReportTableBoroughCol(), rReport.getBorough());
 
         // Insert the new row, returning the primary key value of the new row
         return writableDb.insert(RatSightingDb.getTableName(), null, values);

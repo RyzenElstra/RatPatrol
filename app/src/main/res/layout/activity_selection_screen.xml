@@ -59,6 +59,16 @@
             android:layout_below="@+id/userReportsButton"
             android:layout_alignStart="@+id/userReportsButton" />
 
+        <Button
+            android:id="@+id/reportdata_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="PRESSMETOO"
+            android:layout_marginStart="41dp"
+            android:layout_alignTop="@+id/ratArchiveButton"
+            android:layout_toEndOf="@+id/ratArchiveButton" />
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+
 /**
  * Represents the screen that displays all the rat sightings in New York.
  */
@@ -32,4 +33,6 @@ public class NewYorkRatArchiveActivity extends AppCompatActivity {
         Intent switchToReportDetails = new Intent(this, DetailedRatReportViewActivity.class);
         this.startActivity(switchToReportDetails);
     }
+
+
 }

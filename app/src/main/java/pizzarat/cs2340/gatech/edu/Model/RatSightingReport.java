@@ -11,11 +11,11 @@ public class RatSightingReport {
     private int key;                    // Unique key assigned to each report
     private String location;            // Latitude and longitude of the sighting
     private String date;                // May need to change later
-    private int time;                   // May need to change later
+    private String time;                   // May need to change later
     private String address;             // The address of the sighting
-    private int zipCode;                // The zip code of the rat report
+    private String zipCode;                // The zip code of the rat report
     private String city;                // The city of rat report
-    private Borough borough;            // The borough of the rat sighting;
+    private String borough;            // The borough of the rat sighting;
 
     /**
      * Creates the most specific rat sighting report by specifying all fields.
@@ -28,9 +28,9 @@ public class RatSightingReport {
      * @param city the city portion of the address of the sighting
      * @param borough the borough in New York where the sighting occurred
      */
-    public RatSightingReport(int key, String location, String date, int time,
-                             String address, int zipCode, String city,
-                             Borough borough) {
+    public RatSightingReport(int key, String location, String date, String time,
+                             String address, String zipCode, String city,
+                             String borough) {
         this.key = key;
         this.location = location;
         this.date = date;
@@ -93,7 +93,7 @@ public class RatSightingReport {
      * Gets the time of this rat sighting report.
      * @return the time of the rat report
      */
-    public int getTime() {
+    public String getTime() {
         return time;
     }
 
@@ -101,7 +101,7 @@ public class RatSightingReport {
      * Sets the time of this rat report.
      * @param time the specified time of the report
      */
-    public void setTime(int time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -125,7 +125,7 @@ public class RatSightingReport {
      * Gets the zip code of this rat report.
      * @return the zip code of the rat report
      */
-    public int getZipCode() {
+    public String getZipCode() {
         return zipCode;
     }
 
@@ -133,7 +133,7 @@ public class RatSightingReport {
      * Sets the zip code of the rat report to the specified zip code.
      * @param zipCode the specified zip code
      */
-    public void setZipCode(int zipCode) {
+    public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
 
@@ -157,7 +157,7 @@ public class RatSightingReport {
      * Gets the borough of the rat report
      * @return the borough of the rat report
      */
-    public Borough getBorough() {
+    public String getBorough() {
         return borough;
     }
 
@@ -165,7 +165,7 @@ public class RatSightingReport {
      * Sets the borough of the rat report to the specified borough
      * @param borough the specified borough
      */
-    public void setBorough(Borough borough) {
+    public void setBorough(String borough) {
         this.borough = borough;
     }
 }

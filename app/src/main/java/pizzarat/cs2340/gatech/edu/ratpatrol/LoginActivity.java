@@ -135,6 +135,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 }
             }
         });
+
     }
 
     private void populateAutoComplete() {
@@ -183,38 +184,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         }
     }
-
-    /**
-     * Gets a Map structure of all the stored users.
-     * @return a Map of all the users in the database.
-     * @throws FileNotFoundException if credentials.txt not found
-     * TODO: delete (not storing creds in text file)
-     */
-    public Map<String, String> getCredentials() throws FileNotFoundException {
-        Map<String, String> creds = new HashMap<String, String>();
-
-        Scanner sc = new Scanner(new File("raw/credentials.txt"));
-        while (sc.hasNextLine()) {
-            String[] line = sc.nextLine().split(":");
-            creds.put(line[0], line[1]);
-        }
-        sc.close();
-        return creds;
-    }
-
-    /**
-     * Adds the specified user to the database.
-     * @param username the user's username
-     * @param password the user's password
-     * @throws IOException if error writing to credentials.txt
-     * TODO: delete (not storing creds in text file)
-     */
-    public void addCredentials(String username, String password) throws IOException {
-        BufferedWriter bf = new BufferedWriter(new FileWriter("raw/credentials.txt"));
-        bf.write("/n" + username + ":" + password);
-        bf.close();
-    }
-
 
     /**
      * Attempts to sign in or register the account specified by the login form.
@@ -442,6 +411,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 // Switch to the selection screen activity
                 Intent switchToSelectionScreen = new Intent(LoginActivity.this, SelectionScreenActivity.class);
                 LoginActivity.this.startActivity(switchToSelectionScreen);
+
+                // Switch to the menu activity
+                //Intent switchToMenu = new Intent(LoginActivity.this, MenuActivity.class);
+                //LoginActivity.this.startActivity(switchToMenu);
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
